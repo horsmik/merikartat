@@ -7,7 +7,7 @@ Disclaimer: Ei navigointiin
 Karttojen Lähde: Liikennevirasto. Ei navigointikäyttöön. Ei täytä virallisen merikartan vaatimuksia.
 https://www.liikennevirasto.fi/avoindata/kayttoehdot/avoimen-tietokannan-lisenssi#.WgCfiWiCxPY
 
-Ainuttakaan ohjelman luomaa karttaa ei ole tarkistettu/varmistettu. Ne näyttävät olevan kunnossa, mutta näitä ei tule käyttää navigointiin.
+Ainuttakaan ohjelman luomaa karttaa ei ole tarkistettu/varmistettu. Ne näyttävät olevan kunnossa, mutta näitä ei tule käyttää navigointiin. Ainakaan ainoana karttana :)
 
 Ohjelmat luovat karttalehdet merikarttasarjoille A ja B.
 
