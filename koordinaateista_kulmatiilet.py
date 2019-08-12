@@ -19,7 +19,7 @@ def num2deg(xtile, ytile, zoom):
 
 # Tahan alle voi laittaa kartalehden vasemman ylakulman ja oikean alakulman koordinaatit
 # ohjelma laskee arvauksen vastaavasta karttatiilesta. Usein tuo menee oikein, mutta joskus voi joutua
-# viereisen tiilen, mikali haluaa etta kulmatiili on paperisen kartan mukainen. 
+# valitsemaan viereisen tiilen, mikali haluaa etta kulmatiili on paperisen kartan mukainen. 
 
 #TOP LEFT
 print("618")  # Tahan voi antaa karttalehden nimen
