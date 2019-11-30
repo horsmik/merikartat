@@ -9,15 +9,16 @@ https://www.liikennevirasto.fi/avoindata/kayttoehdot/avoimen-tietokannan-lisenss
 
 Ainuttakaan ohjelman luomaa karttaa ei ole tarkistettu/varmistettu. Ne näyttävät olevan kunnossa, mutta näitä ei tule käyttää navigointiin. Ainakaan ainoana karttana :)
 
-Ohjelmat luovat karttalehdet merikarttasarjoille A ja B.
 
 Ohjelma luo bittikartat sekä niihin liittyvät konfiguraatiotiedostot. OpenCPN muunnokseen tarvitset lisäksi imgkap-ohjelman.
 
 Scripti ei ole erityisen versioriippuvainen toiminee kaikilla 3.x pythoneilla. Tarvitset lisäksi muutaman kirjaston. 
+
 Taustaa:
 https://www.fe83.org/gallery/view_album.php?set_albumName=album675
 
-Hyödyllistä myös asentaa imagemagic, jolla voi käsittellä haettujen bittikarttojen väripaletin ennen KAP konversiota. Ilman tuota karttojen värisävyt saattavat vaihdella (yksittäin tehtyjen imgkap.exe konversioiden jäljiltä)
+Hyödyllistä myös asentaa imagemagick, millä voi käsittellä haettujen bittikarttojen väripaletin ennen KAP konversiota. Ilman tuota karttojen värisävyt saattavat vaihdella paljonkin (yksittäin tehtyjen imgkap.exe konversioiden jäljiltä)
+
 
 Workflow:
 
@@ -36,6 +37,7 @@ magick kartan_nimi.png -remap palette.png kartan_uusi_nimi.png
 Tuossa uudelle kartalle tulee palette.png tiedostossa olevat värisävyt. Jolloin kartat näyttävät yhdenmukaisilta.
 
 Lopuksi tehdään png KAP knversio komennolla:
+
 imgkap.exe kartan_nimi.png kartan_konfiguraatio_tiedosto.txt
 
 Poista lopuksi makekap.BAT (scripti sisää siihen aina uusia rivejä kun ohjelma ajetaan).
