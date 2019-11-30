@@ -12,7 +12,7 @@ Ainuttakaan ohjelman luomaa karttaa ei ole tarkistettu/varmistettu. Ne näyttäv
 
 Ohjelma luo bittikartat sekä niihin liittyvät konfiguraatiotiedostot. OpenCPN muunnokseen tarvitset lisäksi imgkap-ohjelman.
 
-Scripti ei ole erityisen versioriippuvainen toiminee kaikilla 3.x pythoneilla. Tarvitset lisäksi muutaman kirjaston. 
+Scripti ei ole erityisen versioriippuvainen ja toiminee kaikilla 3.x pythoneilla. Tarvitset lisäksi muutaman kirjaston. 
 
 Taustaa:
 https://www.fe83.org/gallery/view_album.php?set_albumName=album675
