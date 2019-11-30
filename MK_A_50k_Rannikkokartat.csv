@@ -1,0 +1,17 @@
+#Tässä on muutama kartta MK_A_RK - nimellä
+#nämä ovat 1:50.0000 mittakaavassa olevia rannikkokarttoja
+#Eli dataa on vähemmän kuin veneilykartoissa, mutta mittakaava on sama
+#Alla on mutama osa-poiminta rannikkokartoista, siten, 
+#että rannikkokartta täyttää veneilykartan eteläpuolelle jäävän alueen.
+
+
+mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
+
+#OK: 621
+liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_621;18718;18736;9500;9524;15
+
+#OK: 624
+liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_624;18684;18717;9520;9524;15
+
+#OK: 625
+liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_625;18657;18684;9502;9538;15

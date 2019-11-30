@@ -1,0 +1,22 @@
+#Ohjeet:
+#Etsi ensin haluamasi karttalehden kulmatiilet ja tiilen x ja y arvot
+#Kartta-alan määrittelevät indeksit (neljä kpl) ovat järjestyksessä:
+#vasen reuna (x), oikea reuna (x), yläreuna (y), alareuna (y) 
+#Tiilien numeroinnissa x-arvot kasvavat vasemmalta oikealle, ja y arvot kasvavat ylhäältä alaspäin
+#Tiilien mumerointia voi etsiä sivustolla: https://openlayers.org/en/latest/examples/canvas-tiles.html
+#mapData kenttään tulee aineiston nimi (löytyy get capabilities kyselyllä)
+#aineiston nimessä olevat välilyönnit tulee korvata merkeillä %20
+#MUSTA päivittää mittakaava. esim 1:50000 merkitään 50000
+#Esim:
+#MK_A_EK_626-1;18647;18660;9485;9492;15
+#Tiilet:       vas-x;oik-x;ylä-y;ala-y
+#
+mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
+liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_0-0;1130;1145;587;602;11
+#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_0-1;1146;1161;587;602;11
+#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_0-2;1162;1176;587;597;11
+#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_0-3;1177;1183;587;593;11
+#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_1-0;1135;1147;571;586;11
+#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_2-0;1133;1147;555;570;11
+
+

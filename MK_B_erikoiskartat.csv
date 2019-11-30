@@ -1,0 +1,45 @@
+#Ohjeet:
+#Etsi ensin haluamasi karttalehden kulmatiilet ja tiilen x ja y arvot
+#Kartta-alan määrittelevät indeksit (neljä kpl) ovat järjestyksessä:
+#vasen reuna (x), oikea reuna (x), yläreuna (y), alareuna (y) 
+#Tiilien numeroinnissa x-arvot kasvavat vasemmalta oikealle, ja y arvot kasvavat ylhäältä alaspäin
+#Tiilien mumerointia voi etsiä sivustolla: https://openlayers.org/en/latest/examples/canvas-tiles.html
+#mapData kenttään tulee aineiston nimi (löytyy get capabilities kyselyllä)
+#aineiston nimessä olevat välilyönnit tulee korvata merkeillä %20
+#MUSTA päivittää mittakaava. esim 1:20000 merkitään 20000
+#Esim:
+#MK_A_EK_626-1;18647;18660;9485;9492;15
+#Tiilet:       vas-x;oik-x;ylä-y;ala-y
+
+mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
+liikennevirasto:Merikarttasarja%20B%20erikoiskartat;25000;MK_B_EK_629-1;18599;18613;9520;9531;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;25000;MK_B_EK_629-2;18605;18620;9511;9521;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_629-3;18622;18624;9505;9508;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_630-3;18584;18586;9511;9511;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_632-1;18557;18561;9517;9519;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_632-2;18566;18568;9519;9520;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_632-3;18564;18569;9526;9527;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_633-1;18542;18545;9525;9530;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_634-1;18511;18512;9526;9527;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_634-2;18513;18516;9519;9521;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_635-1;18502;18505;9541;9546;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_635-2;18509;18515;9531;9534;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_635-3;18510;18516;9541;9542;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_636-1;18494;18502;9542;9548;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_637-1;18462;18474;9542;9551;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;5000;MK_B_EK_637-1A;18474;18474;9548;9548;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_640-1;18484;18490;9527;9536;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_645-1;18420;18424;9539;9542;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_645-2;18433;18438;9531;9536;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_646-1;18431;18436;9511;9517;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_647-1;18402;18407;9538;9540;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_647-2;18402;18404;9528;9530;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_648-1;18410;18413;9510;9510;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_648-2;18412;18414;9523;9524;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_648-3;18419;18420;9520;9525;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_648-4;18419;18420;9512;9513;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_648-5;18426;18429;9517;9519;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_649-1;18398;18405;9478;9485;15
+#liikennevirasto:Merikarttasarja%20B%20erikoiskartat;20000;MK_B_EK_649-2;18412;18414;9487;9493;15
+
+
