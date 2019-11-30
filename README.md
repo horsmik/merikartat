@@ -24,11 +24,13 @@ Workflow:
 Määrittele haluamasi karttapoiminnat csv-tiedostoon. Joko kokonana uusi poiminta tai poista tekemistäni tiedostoista kommenttimerkinnät haluamistasi karttalehdistä.
 
 Aja scripti, esim:
+
 python MK_A_data.csv
 
-Scripti tekee myös BAT tiedoston, minkä voi ajaa suoraan (olettaa että KAP tiedostot kopioidaan alihakemistoon "128_Colors") tai mistä voi katsoa mallia, miten seuraavat vaiheet tehdään.
+Scripti tekee myös makekap.BAT tiedoston, minkä voi ajaa suoraan (olettaa että KAP tiedostot kopioidaan alihakemistoon "128_Colors") tai mistä voi katsoa mallia, miten seuraavat vaiheet tehdään.
 
 Konvertoi kartan väripaletti (esim.) komennolla:
+
 magick kartan_nimi.png -remap palette.png kartan_uusi_nimi.png
 
 Tuossa uudelle kartalle tulee palette.png tiedostossa olevat värisävyt. Jolloin kartat näyttävät yhdenmukaisilta.
@@ -36,7 +38,15 @@ Tuossa uudelle kartalle tulee palette.png tiedostossa olevat värisävyt. Jolloi
 Lopuksi tehdään png KAP knversio komennolla:
 imgkap.exe kartan_nimi.png kartan_konfiguraatio_tiedosto.txt
 
+Poista lopuksi makekap.BAT (scripti sisää siihen aina uusia rivejä kun ohjelma ajetaan).
+
 ...minkä lopputuloksena syntyy geokoodattu KAP tiedosto, minkä voi avata OpenCPN softalla.
+
+Ohjelma luo paljon WMTS_alkuisia.png tiedostoja (A ja B sarjoista näitä syntyy noin 25t kpl). Nämä voi huoleta poistaa konversion jälkeen. Ohjelman voi myös ajaa samalla lähtötiedolla useamman kerran (tällöin vain syntyy uudelleen saman nimiset aineistot). Ohjelman voi myös keskeyttää ja aloittaa uudelleen.
+
+
+Kannattanee harjoitella muutamalla karttalehdellä ja ehkä muutenkin poimia aineistot osissa. Yksittäisen karttalehteen joutuu hakemaan noin 1000 karttatiiltä, mihin kuluu aikaa ehkä kymmenisen minuuttia. 
+
 
 Karttoja oikeellisuutta ei edelleenkään ole varmistettu mitenkään. Ne vaikuttavat olevan kunnossa, mutta tuosta ei ole mitään takuita. ei navigointiin.
 
