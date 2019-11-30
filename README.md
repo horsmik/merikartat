@@ -26,7 +26,7 @@ Määrittele haluamasi karttapoiminnat csv-tiedostoon. Joko kokonana uusi poimin
 
 Aja scripti, esim:
 
-python MK_A_data.csv
+python MK_Get_Map_Tiles.py MK_A_data.csv
 
 Scripti tekee myös makekap.BAT tiedoston, minkä voi ajaa suoraan (olettaa että KAP tiedostot kopioidaan alihakemistoon "128_Colors") tai mistä voi katsoa mallia, miten seuraavat vaiheet tehdään.
 
