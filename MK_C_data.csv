@@ -1,0 +1,52 @@
+#SARJA C - Ahvenanmaa, tässä materiaalissa on kaikki C-karttasarja karttalehdet.
+#Karttaruutujen rajaukset noudattavat jotakuinkin paperikartan lehtijakoa.
+#Ohjeet:
+#Etsi ensin haluamasi karttalehden kulmatiilet ja tiilen x ja y arvot
+#Kartta-alan määrittelevät indeksit (neljä kpl) ovat järjestyksessä:
+#vasen reuna (x), oikea reuna (x), yläreuna (y), alareuna (y) 
+#Tiilien numeroinnissa x-arvot kasvavat vasemmalta oikealle, ja y arvot kasvavat ylhäältä alaspäin
+#Tiilien mumerointia voi etsiä sivustolla: https://openlayers.org/en/latest/examples/canvas-tiles.html
+#mapData kenttään tulee aineiston nimi (löytyy get capabilities kyselyllä)
+#aineiston nimessä olevat välilyönnit tulee korvata merkeillä %20
+#MUSTA päivittää mittakaava. esim 1:50000 merkitään 50000
+#Poista risuaita/kommenttimerkki niiden rivien kohdalta mitkä haluat mukaan poimintaan
+
+#Esim:
+#MK_A_EK_626-1;18647;18660;9485;9492;15
+#Tiilet:       vas-x;oik-x;ylä-y;ala-y
+
+mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
+#liikennevirasto:Merikarttasarja%20D%20public;50000;MK_C_714;18311;18334;9524;9557;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_742;18292;18316;9526;9560;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_730;18294;18318;9495;9528;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_731;18297;18321;9466;9498;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_732;18295;18318;9438;9470;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_733;18293;18317;9408;9441;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_734;18287;18310;9385;9414;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_743;18270;18293;9530;9563;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_741;18265;18297;9509;9533;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_740;18267;18297;9489;9513;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_739;18267;18299;9467;9491;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_738;18264;18297;9445;9468;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_737;18271;18295;9413;9445;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_736;18266;18289;9386;9419;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_744;18241;18273;9526;9549;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_745;18236;18269;9504;9527;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_746;18236;18269;9481;9504;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_747;18238;18270;9461;9484;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_748;18237;18270;9442;9465;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_749;18241;18275;9418;9443;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_754;18207;18240;9518;9541;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_753;18206;18238;9498;9521;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_752;18220;18243;9465;9498;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_751;18205;18238;9441;9465;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_750;18211;18244;9418;9442;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_755;18185;18208;9517;9549;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_756;18181;18213;9495;9518;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_757;18200;18223;9466;9499;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_758;18183;18207;9445;9478;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_759;18180;18213;9423;9447;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_763;18149;18183;9478;9504;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_761;18149;18183;9455;9477;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_760;18149;18183;9434;9455;15
+#liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_762;18126;18148;9455;9488;15

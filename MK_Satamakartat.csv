@@ -11,12 +11,16 @@
 #MK_A_EK_626-1;18647;18660;9485;9492;15
 #Tiilet:       vas-x;oik-x;ylä-y;ala-y
 #
+
+# SATAMAKARTAT
+# Huom. näistä puuttuu veneilykarttojen veneilyreitit, joten joskus voi olla parempi käyttää
+# karttasarjan 1:50000 karttaa pikemminkin kuin näitä 1:20000 satamakarttoja
+
 mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
 
-liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_951;2342;2365;1175;1192;12
-#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_952;2293;2345;1179;1207;12
-#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_953;2265;2292;1179;1214;12
-#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_955;2266;2295;1143;1178;12
-#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_956;2266;2295;1111;1143;12
-#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_957;2277;2321;1084;1115;12
-#liikennevirasto:Yleiskartat%20250k%20public;250000;MK_YLEIS_250k_958;2300;2343;1042;1083;12
+liikennevirasto:Satamakartat;20000;MK_SK_191_HKI;18644;18665;9477;9508;15
+#liikennevirasto:Satamakartat;20000;MK_SK_192_VUOSAARI;18664;18685;9477;9504;15
+#liikennevirasto:Satamakartat;25000;MK_SK_160_MAARIANHAMINA;18189;18210;9495;9526;15
+#liikennevirasto:Satamakartat;25000;MK_SK_162_SOTTUNGA;18227;18267;9490;9517;15
+#liikennevirasto:Satamakartat;20000;MK_SK_167_UTO;18323;18334;9538;9565;15
+#liikennevirasto:Satamakartat;20000;MK_SK_190_TURKU;18385;18412;9425;9446;15
