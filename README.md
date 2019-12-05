@@ -48,7 +48,7 @@ Poista lopuksi makekap.BAT (scripti sisää siihen aina uusia rivejä kun ohjelm
 
 Ohjelma luo paljon WMTS_alkuisia.png tiedostoja (A, B, C ja D sarjoista näitä syntyy noin 80t kpl). Nämä voi huoleta poistaa konversion jälkeen. Ohjelman voi myös ajaa samalla lähtötiedolla useamman kerran (tällöin vain syntyy uudelleen saman nimiset aineistot). Ohjelman voi myös keskeyttää ja aloittaa uudelleen (huom. multithread ohjelmaa on vaikeampi keskeyttää, koska se ei juuri vastaa Ctrl-C komentoon).
 
-Kannattanee harjoitella muutamalla karttalehdellä ja ehkä muutenkin poimia aineistot osissa. Yksittäisen karttalehteen joutuu hakemaan noin 1000 karttatiiltä, mihin kuluu aikaa ehkä kymmenisen minuuttia. 
+Kannattanee harjoitella muutamalla karttalehdellä ja ehkä muutenkin poimia aineistot osissa. Yksittäisen karttalehteen joutuu hakemaan noin 1000 karttatiiltä, mihin kuluu aikaa ehkä reilu kymmenisen minuuttia. Multithread -versio tekee saman parissa minuutissa.
 
 Karttoja oikeellisuutta ei edelleenkään ole varmistettu mitenkään. Ne vaikuttavat olevan kunnossa, mutta tuosta ei ole mitään takuita. ei navigointiin.
 
