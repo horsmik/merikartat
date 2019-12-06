@@ -120,7 +120,6 @@ def Download_Tile(link):
   filename_x = link.split('tilecol=')[1].split('&')[0]
   filename_y = link.split('tilerow=')[1].split('&')[0]
   filename_z = link.split('WGS84_Pseudo-Mercator:')[1].split('&')[0]
-  request.urlretrieve(link, "WMTS_"+filename_z+"_"+filename_x+"_"+filename_y+".png")
   print("WMTS_"+filename_z+"_"+filename_x+"_"+filename_y+".png")
   while retryAttemptsRemaining > 0:
     try:
