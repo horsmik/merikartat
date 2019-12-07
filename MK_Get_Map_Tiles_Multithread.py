@@ -164,6 +164,7 @@ def pixelPeepping(maxTiles, filename, xmin, xmax, ymin, ymax, zoomLevel):
 def CreateListOfTiles(mapData, scale, name_extension, xmin, xmax, ymin, ymax, zoom):
   x_size = str(256*(xmax+1-xmin))
   y_size = str(256*(ymax+1-ymin))
+  listOfTiles=[]
   for x in range(xmin,xmax+1):
     for y in range(ymin,ymax+1):
       listOfTiles.append("https://julkinen.liikennevirasto.fi/rasteripalvelu/service/wmts?request=GetTile&version=1.0.0&service=wmts&layer="+mapData+"&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:"+str(zoom)+"&tilerow="+str(y)+"&tilecol="+str(x)+"&format=image/png&style=default")
@@ -204,7 +205,7 @@ def main() :
         for index, row in gridData.iterrows():
             listOfTiles = CreateListOfTiles(row['mapData'], int(row['mapScale']), row['fileName'], int(row['x_min']), int(row['x_max']), int(row['y_min']), int(row['y_max']), int(row['zoomLevel']))
             #Alla oleva tarkistaa, etta hakuja ei ole liikaa ja varoittaa liian isosta karttalehdesta. Voi laittaa paalle uusia aineistoja tehdessa.
-            #pixelPeepping(2000, row['fileName'], int(row['x_min']), int(row['x_max']), int(row['y_min']), int(row['y_max']), int(row['zoomLevel']))
+            pixelPeepping(2000, row['fileName'], int(row['x_min']), int(row['x_max']), int(row['y_min']), int(row['y_max']), int(row['zoomLevel']))
             download_maps(listOfTiles)
     for index, row in gridData.iterrows():
         MakeKapHeaderForGroupOfTiles(int(row['mapScale']), row['fileName'], int(row['x_min']), int(row['x_max']), int(row['y_max']), int(row['y_min']), int(row['zoomLevel']))
