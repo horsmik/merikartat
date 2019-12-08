@@ -54,7 +54,7 @@ Esim:
 
 > python find_tile.py A 15 18657 9496
 
-Apuohjelma hakee 3X3 matriisin karttatiilista. Näkymää voi vyöryttää nuolinäppäimillä ruudun kerrallaan (tai Shift + nuolinäppäimillä 3 ruutua kerrallaan).
+Apuohjelma hakee 3X3 matriisin karttatiilista. Näkymää voi vyöryttää nuolinäppäimillä ruudun kerrallaan (tai Shift + nuolinäppäimillä 3 ruutua kerrallaan). Apuohjelma myös tallentaa karttatiilet, joten ko. karttatiiliä ei enää tarvitse hakea varsinaisessa poiminnassa.
 
 Karttoja oikeellisuutta ei edelleenkään ole varmistettu mitenkään. Ne vaikuttavat olevan kunnossa, mutta tuosta ei ole mitään takuita. ei navigointiin.
 
