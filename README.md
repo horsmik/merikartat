@@ -26,21 +26,19 @@ Määrittele haluamasi karttapoiminnat csv-tiedostoon. Joko kokonana uusi poimin
 
 Aja scripti, esim:
 
-python MK_Get_Map_Tiles.py MK_A_data.csv
-tai
-python MK_Get_Map_Tiles_Multithread.py MK_A_data.csv
+> python MK_Get_Map_Tiles_Multithread.py MK_A_data.csv
 
 Scripti tekee myös makekap.BAT tiedoston, minkä voi ajaa suoraan (olettaa että KAP tiedostot kopioidaan alihakemistoon "128_Colors") tai mistä voi katsoa mallia, miten seuraavat vaiheet tehdään.
 
 Konvertoi kartan väripaletti (esim.) komennolla:
 
-magick kartan_nimi.png -remap palette.png kartan_uusi_nimi.png
+> magick kartan_nimi.png -remap palette.png kartan_uusi_nimi.png
 
 Tuossa uudelle kartalle tulee palette.png tiedostossa olevat värisävyt, jolloin kaikki kartat näyttävät yhdenmukaisilta.
 
 Lopuksi tehdään .png > .KAP -konversio komennolla:
 
-imgkap.exe kartan_nimi.png kartan_konfiguraatio_tiedosto.txt
+> imgkap.exe kartan_nimi.png kartan_konfiguraatio_tiedosto.txt
 
 Poista lopuksi makekap.BAT (scripti sisää siihen aina uusia rivejä kun ohjelma ajetaan).
 
@@ -48,7 +46,7 @@ Poista lopuksi makekap.BAT (scripti sisää siihen aina uusia rivejä kun ohjelm
 
 Ohjelma luo paljon WMTS_alkuisia.png tiedostoja (A, B, C ja D sarjoista näitä syntyy noin 80t kpl). Nämä voi huoleta poistaa konversion jälkeen. Ohjelman voi myös ajaa samalla lähtötiedolla useamman kerran (tällöin vain syntyy uudelleen saman nimiset aineistot). Ohjelman voi myös keskeyttää ja aloittaa uudelleen (huom. multithread ohjelmaa on vaikeampi keskeyttää, koska se ei juuri vastaa Ctrl-C komentoon).
 
-Kannattanee harjoitella muutamalla karttalehdellä ja ehkä muutenkin poimia aineistot osissa. Yksittäisen karttalehteen joutuu hakemaan noin 1000 karttatiiltä, mihin kuluu aikaa ehkä reilu kymmenisen minuuttia. Multithread -versio tekee saman puolessa minuutissa.
+Kannattanee harjoitella muutamalla karttalehdellä ja ehkä muutenkin poimia aineistot osissa.
 
 Karttoja oikeellisuutta ei edelleenkään ole varmistettu mitenkään. Ne vaikuttavat olevan kunnossa, mutta tuosta ei ole mitään takuita. ei navigointiin.
 
