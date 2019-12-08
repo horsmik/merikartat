@@ -51,6 +51,30 @@ def downKey(event):
     haeTiilet(*C_Data)
     updateGridPictures(C_Data[1], C_Data[2], C_Data[3])
 
+def s_leftKey(event):
+    global C_data
+    C_Data[2] = C_Data[2]-3
+    haeTiilet(*C_Data)
+    updateGridPictures(C_Data[1], C_Data[2], C_Data[3])
+
+def s_rightKey(event):
+    global C_Data
+    C_Data[2] = C_Data[2]+3
+    haeTiilet(*C_Data)
+    updateGridPictures(C_Data[1], C_Data[2], C_Data[3])
+    
+def s_upKey(event):
+    global C_Data
+    C_Data[3] = C_Data[3]-3
+    haeTiilet(*C_Data)
+    updateGridPictures(C_Data[1], C_Data[2], C_Data[3])
+
+
+def s_downKey(event):
+    global C_Data
+    C_Data[3] = C_Data[3]+3
+    haeTiilet(*C_Data)
+    updateGridPictures(C_Data[1], C_Data[2], C_Data[3])
 
 def urlTiili(mapData, zoom, x_tiili, y_tiili):
     image_url="https://julkinen.vayla.fi/rasteripalvelu/service/wmts?request=GetTile&version=1.0.0&service=wmts&layer="+str(mapData)+"&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:"+str(zoom)+"&tilerow="+str(y_tiili)+"&tilecol="+str(x_tiili)+"&format=image/png&style=default"
@@ -58,8 +82,9 @@ def urlTiili(mapData, zoom, x_tiili, y_tiili):
     return (image_url)
 
 def start_point():
+  global wmtsName
   if (len(sys.argv)) != 5:
-    print("Anna parametrit A/B/C/D/RK/YK250/SK  zoom x_tiili y_tiili")
+    print("Anna parametrit A/B/C/D/E/F/RK/YK250/SK  zoom x_tiili y_tiili")
     print("Esimerkiksi:")
     print("python find_tile.py A 15 18657 9496")
     print("...avaa A-karttasarjan Harmajan majakan kohdalta")
@@ -72,25 +97,36 @@ def start_point():
   y_tiili = int(sys.argv[4])
 
   if kartta == "A":
-    #print("A")
     mapData = "liikennevirasto:Merikarttasarja%20A%20public"
+    wmtsName = "liikennevirasto_Merikarttasarja_A_public"
   elif kartta == "B":
-    #print("B")
     mapData = "liikennevirasto:Merikarttasarja%20B"
-  if kartta == "C":
-    #print("C")
+    wmtsName = "liikennevirasto_Merikarttasarja_B"
+  elif kartta == "C":
     mapData = "liikennevirasto:Merikarttasarja%20C%20public"
+    wmtsName = "liikennevirasto_Merikarttasarja_C_public"
   elif kartta == "D":
-    #print("D")
     mapData = "liikennevirasto:Merikarttasarja%20D"
+    wmtsName = "liikennevirasto_Merikarttasarja_D"
   elif kartta == "RK":
-    #print("RK")
     mapData = "liikennevirasto:Rannikkokartat%20public"
+    wmtsName = "liikennevirasto_Rannikkokartat_public"
   elif kartta == "YK250":
-    #print("YK250")
     mapData = "liikennevirasto:Yleiskartat%20250k%20public"
+    wmtsName = "liikennevirasto_Yleiskartat_250k_public"
   elif kartta=="SK":
     mapData="liikennevirasto:Satamakartat"
+    wmtsName="liikennevirasto_Satamakartat"
+  elif kartta == "E":
+    mapData = "liikennevirasto:Merikarttasarja%20E"
+    wmtsName = "liikennevirasto_Merikarttasarja_E"
+  elif kartta == "F":
+    mapData = "liikennevirasto:Merikarttasarja%20F%20public"
+    wmtsName = "liikennevirasto_Merikarttasarja_F_public"
+  elif kartta == "G":
+    mapData = "liikennevirasto:Merikarttasarja%20G%20public"
+    wmtsName = "liikennevirasto_Merikarttasarja_G_public"
+
   return[mapData, zoom, x_tiili, y_tiili]
   #return from StartPoint()
 
@@ -111,7 +147,7 @@ def Download_Tile(link):
   while retryAttemptsRemaining > 0:
     try:
       ##Get one tile from wmts and save bitmap as WMTS_zoom_x_y.png
-      request.urlretrieve(link, "WMTS_"+filename_z+"_"+filename_x+"_"+filename_y+".png")
+      request.urlretrieve(link, "WMTS_"+wmtsName+"_"+filename_z+"_"+filename_x+"_"+filename_y+".png")
     except request.URLError as e:
       print('Html-hakuvirhe:', e.reason ,' (uusi yritys)')
       retryAttemptsRemaining = retryAttemptsRemaining - 1
@@ -128,31 +164,31 @@ def Download_Tile(link):
 def haeTiilet(mapData, zoom, x_tiili, y_tiili):  
     #print('WMTS_'+str(zoom)+'_'+str(x_tiili)+'_'+str(y_tiili)+'.png')
     listOfTiles=[]
-    if path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili)+'_'+str(y_tiili)+'.png') == False:
+    if path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili)+'_'+str(y_tiili)+'.png') == False:
         #print("Center: file not found, need to get from api"+str(x_tiili)+" "+str(y_tiili))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili, y_tiili))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili)+'_'+str(y_tiili-1)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili)+'_'+str(y_tiili-1)+'.png') == False:
         #print("N: file not found, need to get from api"+str(x_tiili)+" "+str(y_tiili-1))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili, y_tiili-1))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili+1)+'_'+str(y_tiili-1)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili+1)+'_'+str(y_tiili-1)+'.png') == False:
         #print("NE: file not found, need to get from api"+str(x_tiili+1)+" "+str(y_tiili-1))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili+1, y_tiili-1))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili+1)+'_'+str(y_tiili)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili+1)+'_'+str(y_tiili)+'.png') == False:
         #print("E: file not found, need to get from api"+str(x_tiili+1)+" "+str(y_tiili))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili+1, y_tiili))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili+1)+'_'+str(y_tiili+1)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili+1)+'_'+str(y_tiili+1)+'.png') == False:
         #print("SE: file not found, need to get from api"+str(x_tiili+1)+" "+str(y_tiili+1))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili+1, y_tiili+1))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili)+'_'+str(y_tiili+1)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili)+'_'+str(y_tiili+1)+'.png') == False:
         #print("S: file not found, need to get from api"+str(x_tiili)+" "+str(y_tiili+1))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili, y_tiili+1))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili-1)+'_'+str(y_tiili+1)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili-1)+'_'+str(y_tiili+1)+'.png') == False:
         #print("SW: file not found, need to get from api"+str(x_tiili-1)+" "+str(y_tiili+1))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili-1, y_tiili+1))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili-1)+'_'+str(y_tiili)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili-1)+'_'+str(y_tiili)+'.png') == False:
         #print("W: file not found, need to get from api"+str(x_tiili-1)+" "+str(y_tiili))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili-1, y_tiili))
-    if  path.exists('WMTS_'+str(zoom)+'_'+str(x_tiili-1)+'_'+str(y_tiili-1)+'.png') == False:
+    if  path.exists('WMTS_'+wmtsName+'_'+str(zoom)+'_'+str(x_tiili-1)+'_'+str(y_tiili-1)+'.png') == False:
         #print("NW: file not found, need to get from api"+str(x_tiili-1)+" "+str(y_tiili-1))
         listOfTiles.append(urlTiili(mapData, zoom, x_tiili-1, y_tiili-1))
 #    print("Lista urleista")
@@ -167,15 +203,15 @@ def updateGridPictures(zoom, x_tiili, y_tiili):
 #    adding image (remember image should be PNG and not JPG) 
 #    print("updateGrid-aliohjelma")
     #img_C.configure(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili-1)+"_"+str(y_tiili-1)+".png")
-    img_NW = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili-1)+"_"+str(y_tiili-1)+".png") 
-    img_N = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili)+"_"+str(y_tiili-1)+".png") 
-    img_NE = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili+1)+"_"+str(y_tiili-1)+".png") 
-    img_W = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili-1)+"_"+str(y_tiili)+".png") 
-    img_C = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili)+"_"+str(y_tiili)+".png") 
-    img_E = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili+1)+"_"+str(y_tiili)+".png") 
-    img_SW = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili-1)+"_"+str(y_tiili+1)+".png") 
-    img_S = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili)+"_"+str(y_tiili+1)+".png") 
-    img_SE = PhotoImage(file = r"WMTS_"+str(zoom)+"_"+str(x_tiili+1)+"_"+str(y_tiili+1)+".png") 
+    img_NW = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili-1)+"_"+str(y_tiili-1)+".png") 
+    img_N = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili)+"_"+str(y_tiili-1)+".png") 
+    img_NE = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili+1)+"_"+str(y_tiili-1)+".png") 
+    img_W = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili-1)+"_"+str(y_tiili)+".png") 
+    img_C = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili)+"_"+str(y_tiili)+".png") 
+    img_E = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili+1)+"_"+str(y_tiili)+".png") 
+    img_SW = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili-1)+"_"+str(y_tiili+1)+".png") 
+    img_S = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili)+"_"+str(y_tiili+1)+".png") 
+    img_SE = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(zoom)+"_"+str(x_tiili+1)+"_"+str(y_tiili+1)+".png") 
       
     # setting image with the help of label 
     Label(master, image = img_NW, text = "x:"+str(x_tiili-1)+" y:"+str(y_tiili-1), font=('Helvetica 24 bold'), fg="red", compound = "center", bg="black").grid(row = 0, column = 0)
@@ -198,25 +234,25 @@ haeTiilet(*C_Data)
 
 
 master = Tk()
-master.title("Use arrow keys to move. <Esc> or <q> to exit.") 
+master.title("Use arrow keys to move. Shift-arrow keys to move 3 steps. <Esc> or <q> to exit.") 
 
 middleTileUrl = urlTiili(*start_point())
-
+print(middleTileUrl)
 #print(C_Data[2]) #X_TILE 18000 left right
 #print(C_Data[3]) #Y_TILE 9500 up down
 
 
 
 # adding image 
-img_NW = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2]-1)+"_"+str(C_Data[3]-1)+".png") 
-img_N = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2])+"_"+str(C_Data[3]-1)+".png") 
-img_NE = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2]+1)+"_"+str(C_Data[3]-1)+".png") 
-img_W = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2]-1)+"_"+str(C_Data[3])+".png") 
-img_C = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2])+"_"+str(C_Data[3])+".png") 
-img_E = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2]+1)+"_"+str(C_Data[3])+".png") 
-img_SW = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2]-1)+"_"+str(C_Data[3]+1)+".png") 
-img_S = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2])+"_"+str(C_Data[3]+1)+".png") 
-img_SE = PhotoImage(file = r"WMTS_"+str(C_Data[1])+"_"+str(C_Data[2]+1)+"_"+str(C_Data[3]+1)+".png") 
+img_NW = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2]-1)+"_"+str(C_Data[3]-1)+".png") 
+img_N = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2])+"_"+str(C_Data[3]-1)+".png") 
+img_NE = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2]+1)+"_"+str(C_Data[3]-1)+".png") 
+img_W = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2]-1)+"_"+str(C_Data[3])+".png") 
+img_C = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2])+"_"+str(C_Data[3])+".png") 
+img_E = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2]+1)+"_"+str(C_Data[3])+".png") 
+img_SW = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2]-1)+"_"+str(C_Data[3]+1)+".png") 
+img_S = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2])+"_"+str(C_Data[3]+1)+".png") 
+img_SE = PhotoImage(file = r"WMTS_"+wmtsName+"_"+str(C_Data[1])+"_"+str(C_Data[2]+1)+"_"+str(C_Data[3]+1)+".png") 
  
  
 
@@ -239,7 +275,10 @@ master.bind('<Left>', leftKey)
 master.bind('<Right>', rightKey)
 master.bind('<Up>', upKey)
 master.bind('<Down>', downKey)
+master.bind('<Shift-Left>', s_leftKey)
+master.bind('<Shift-Right>', s_rightKey)
+master.bind('<Shift-Up>', s_upKey)
+master.bind('<Shift-Down>', s_downKey)
 master.bind('<Escape>', close)
 master.bind('q', close)
-
 mainloop() 
