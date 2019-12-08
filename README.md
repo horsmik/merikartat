@@ -48,6 +48,14 @@ Ohjelma luo paljon WMTS_alkuisia.png tiedostoja (A, B, C ja D sarjoista näitä 
 
 Kannattanee harjoitella muutamalla karttalehdellä ja ehkä muutenkin poimia aineistot osissa.
 
+Mukana on myös hätäisesti tehty apuohjelma karttalehden kulmien etsimiseen.
+
+Esim:
+
+> python find_tile.py A 15 18657 9496
+
+Apuohjelma hakee 3X3 matriisin karttatiilista. Näkymää voi vyöryttää nuolinäppäimillä ruudun kerrallaan (tai Shift + nuolinäppäimillä 3 ruutua kerrallaan).
+
 Karttoja oikeellisuutta ei edelleenkään ole varmistettu mitenkään. Ne vaikuttavat olevan kunnossa, mutta tuosta ei ole mitään takuita. ei navigointiin.
 
 Huom: En ole keksinyt miten KAP tiedostoihin saisi "Läpinäkyvän värin". Jos karttatiilien haku menee yli aineistorajan, karttaan syntyy valkoinen reunus, mikä näkyy myös lopullisessa KAP-kartassa. Tästä johtuen esimerkiksi erikoiskarttojen poiminnassa joutuu rajaamaan poiminnan sellaiseksi että mukaan otetaan vain kokonaan erikoiskartan sisään mahtuvat karttatiilet. 
