@@ -1,0 +1,41 @@
+#SARJA F - Osa karttalehdistä ei ole kovin tarkasti paperikartan muotoisia.
+
+#Ohjeet:
+#Etsi ensin haluamasi karttalehden kulmatiilet ja tiilen x ja y arvot
+#Kartta-alan määrittelevät indeksit (neljä kpl) ovat järjestyksessä:
+#vasen reuna (x), oikea reuna (x), yläreuna (y), alareuna (y) 
+#Tiilien numeroinnissa x-arvot kasvavat vasemmalta oikealle, ja y arvot kasvavat ylhäältä alaspäin
+#Tiilien mumerointia voi etsiä sivustolla: https://openlayers.org/en/latest/examples/canvas-tiles.html
+#mapData kenttään tulee aineiston nimi (löytyy get capabilities kyselyllä)
+#aineiston nimessä olevat välilyönnit tulee korvata merkeillä %20
+#MUSTA päivittää mittakaava. esim 1:50000 merkitään 50000
+#Poista risuaita/kommenttimerkki niiden rivien kohdalta mitkä haluat mukaan poimintaan
+
+#Esim:
+#MK_A_EK_626-1;18647;18660;9485;9492;15
+#Tiilet:       vas-x;oik-x;ylä-y;ala-y
+
+mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
+liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_813;18291;18324;9018;9067;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_814;18268;18317;8992;9026;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_816;18283;18317;8951;9000;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_815;18251;18285;8944;8993;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_817;18265;18314;8923;8956;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_818;18306;18340;8928;8976;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_819;18308;18357;8901;8934;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_820;18280;18308;8895;8928;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_822;18257;18306;8868;8902;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_821;18257;18279;8903;8937;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_823;18270;18303;8829;8872;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_824;18303;18341;8839;8872;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_826;18338;18388;8839;8873;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_829;18387;18421;8849;8898;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_825;18329;18357;8873;8902;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_827;18358;18390;8873;8901;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_828;18368;18403;8819;8855;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_830;18401;18434;8806;8855;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_831;18420;18454;8763;8812;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_832;18455;18480;8764;8813;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_833;18439;18488;8739;8772;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_834;18480;18514;8714;8764;15
+#liikennevirasto:Merikarttasarja%20F%20public;50000;MK_F_835;18493;18542;8696;8729;15

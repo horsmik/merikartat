@@ -1,0 +1,39 @@
+#SARJA G - Karttalehtien numerointi ei ollut tiedossa. Kartoille on annettu juokseva numerointi
+#Osa karttalehdistä ei ole kovin tarkasti paperikartan muotoisia.
+
+#Ohjeet:
+#Etsi ensin haluamasi karttalehden kulmatiilet ja tiilen x ja y arvot
+#Kartta-alan määrittelevät indeksit (neljä kpl) ovat järjestyksessä:
+#vasen reuna (x), oikea reuna (x), yläreuna (y), alareuna (y) 
+#Tiilien numeroinnissa x-arvot kasvavat vasemmalta oikealle, ja y arvot kasvavat ylhäältä alaspäin
+#Tiilien mumerointia voi etsiä sivustolla: https://openlayers.org/en/latest/examples/canvas-tiles.html
+#mapData kenttään tulee aineiston nimi (löytyy get capabilities kyselyllä)
+#aineiston nimessä olevat välilyönnit tulee korvata merkeillä %20
+#MUSTA päivittää mittakaava. esim 1:50000 merkitään 50000
+#Poista risuaita/kommenttimerkki niiden rivien kohdalta mitkä haluat mukaan poimintaan
+
+#Esim:
+#MK_A_EK_626-1;18647;18660;9485;9492;15
+#Tiilet:       vas-x;oik-x;ylä-y;ala-y
+
+mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
+liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_1;18514;18567;8665;8701;15
+#liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_2;18542;18594;8632;8668;15
+#liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_3;18554;18605;8598;8634;15
+#liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_4;18568;18620;8568;8604;15
+#liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_5;18603;18655;8533;8569;15
+#liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_6;18651;18703;8527;8563;15
+#liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_7;18651;18703;8495;8530;15
+#liikennevirasto:Merikarttasarja%20G%20public;50000;MK_G_8;18606;18654;8503;8539;15
+#liikennevirasto:Merikarttasarja%20G%20public;50001;MK_G_9;18604;18655;8474;8510;15
+#liikennevirasto:Merikarttasarja%20G%20public;50002;MK_G_10;18651;18703;8467;8503;15
+#liikennevirasto:Merikarttasarja%20G%20public;50003;MK_G_11;18640;18692;8438;8474;15
+#liikennevirasto:Merikarttasarja%20G%20public;50004;MK_G_12;18599;18651;8440;8476;15
+#liikennevirasto:Merikarttasarja%20G%20public;50005;MK_G_13;18597;18650;8405;8441;15
+#liikennevirasto:Merikarttasarja%20G%20public;50006;MK_G_14;18640;18692;8404;8440;15
+#liikennevirasto:Merikarttasarja%20G%20public;50007;MK_G_15;18618;18670;8375;8411;15
+#liikennevirasto:Merikarttasarja%20G%20public;50008;MK_G_16;18581;18630;8374;8410;15
+#liikennevirasto:Merikarttasarja%20G%20public;50009;MK_G_17;18580;18627;8343;8379;15
+
+
+

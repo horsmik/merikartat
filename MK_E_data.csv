@@ -1,0 +1,32 @@
+#SARJA E - Osa karttalehdistä ei ole kovin tarkasti paperikartan muotoisia.
+
+#Ohjeet:
+#Etsi ensin haluamasi karttalehden kulmatiilet ja tiilen x ja y arvot
+#Kartta-alan määrittelevät indeksit (neljä kpl) ovat järjestyksessä:
+#vasen reuna (x), oikea reuna (x), yläreuna (y), alareuna (y) 
+#Tiilien numeroinnissa x-arvot kasvavat vasemmalta oikealle, ja y arvot kasvavat ylhäältä alaspäin
+#Tiilien mumerointia voi etsiä sivustolla: https://openlayers.org/en/latest/examples/canvas-tiles.html
+#mapData kenttään tulee aineiston nimi (löytyy get capabilities kyselyllä)
+#aineiston nimessä olevat välilyönnit tulee korvata merkeillä %20
+#MUSTA päivittää mittakaava. esim 1:50000 merkitään 50000
+#Poista risuaita/kommenttimerkki niiden rivien kohdalta mitkä haluat mukaan poimintaan
+
+#Esim:
+#MK_A_EK_626-1;18647;18660;9485;9492;15
+#Tiilet:       vas-x;oik-x;ylä-y;ala-y
+
+mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
+liikennevirasto:Merikarttasarja%20E;50000;MK_E_801;18300;18338;9366;9398;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_800;18260;18299;9366;9398;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_802;18290;18336;9342;9365;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_803;18290;18336;9312;9342;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_804;18300;18346;9280;9312;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_805;18306;18352;9260;9292;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_806;18307;18353;9238;9259;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_807;18307;18353;9211;9237;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_808;18347;18367;9191;9237;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_809;18315;18346;9167;9210;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_810;18306;18338;9144;9172;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_811;18305;18336;9097;9143;15
+#liikennevirasto:Merikarttasarja%20E;50000;MK_E_812;18300;18332;9060;9109;15
+

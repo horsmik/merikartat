@@ -16,7 +16,7 @@
 #Tiilet:       vas-x;oik-x;ylä-y;ala-y
 
 mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
-#liikennevirasto:Merikarttasarja%20D%20public;50000;MK_C_714;18311;18334;9524;9557;15
+liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_714;18311;18334;9524;9557;15
 #liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_742;18292;18316;9526;9560;15
 #liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_730;18294;18318;9495;9528;15
 #liikennevirasto:Merikarttasarja%20C%20public;50000;MK_C_731;18297;18321;9466;9498;15
