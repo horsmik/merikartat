@@ -40,7 +40,7 @@ Lopuksi tehdään .png > .KAP -konversio komennolla:
 
 > imgkap.exe kartan_nimi.png kartan_konfiguraatio_tiedosto.txt
 
-Poista lopuksi makekap.BAT (scripti sisää siihen aina uusia rivejä kun ohjelma ajetaan).
+Poista lopuksi makekap.BAT (scripti lisää siihen aina uusia rivejä kun ohjelma ajetaan).
 
 ...minkä lopputuloksena syntyy geokoodattu KAP tiedosto, minkä voi avata OpenCPN softalla.
 
