@@ -14,12 +14,12 @@
 
 mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
 
-liikennevirasto:Merikarttasarja%20B;50000;MK_B_629;18601;18625;9504;9537;15
+#liikennevirasto:Merikarttasarja%20B;50000;MK_B_629;18601;18625;9504;9537;15
 #liikennevirasto:Merikarttasarja%20B;50000;MK_B_630;18570;18603;9499;9524;15
 #liikennevirasto:Merikarttasarja%20B;50000;MK_B_631;18570;18603;9517;9541;15
-#liikennevirasto:Merikarttasarja%20B;50000;MK_B_632;18550;18575;9508;9540;15
+#liikennevirasto:Merikarttasarja%20B;50000;MK_B_632;18551;18575;9508;9540;15
 #liikennevirasto:Merikarttasarja%20B;50000;MK_B_633;18528;18552;9519;9551;15
-#liikennevirasto:Merikarttasarja%20B;50000;MK_B_634;18505;18530;9498;9533;15
+liikennevirasto:Merikarttasarja%20B;50000;MK_B_634;18506;18529;9498;9533;15
 #liikennevirasto:Merikarttasarja%20B;50000;MK_B_635;18498;18531;9530;9554;15
 #liikennevirasto:Merikarttasarja%20B;50000;MK_B_636;18468;18501;9544;9567;15
 #liikennevirasto:Merikarttasarja%20B;50000;MK_B_637;18436;18471;9542;9565;15
