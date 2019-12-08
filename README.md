@@ -22,7 +22,7 @@ Hyödyllistä myös asentaa imagemagick, millä voi käsittellä haettujen bitti
 
 Workflow:
 
-Määrittele haluamasi karttapoiminnat csv-tiedostoon. Joko kokonana uusi poiminta tai poista tekemistäni tiedostoista kommenttimerkinnät haluamistasi karttalehdistä.
+Määrittele haluamasi karttapoiminnat csv-tiedostoon. Tee joko kononaan uusi poiminta tai poista tekemistäni tiedostoista kommenttimerkinnät haluamistasi karttalehdistä.
 
 Aja scripti, esim:
 
