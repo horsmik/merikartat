@@ -42,7 +42,7 @@ Lopuksi tehdään .png > .KAP -konversio komennolla:
 
 Poista lopuksi makekap.BAT (scripti lisää siihen aina uusia rivejä kun ohjelma ajetaan).
 
-...minkä lopputuloksena syntyy geokoodattu KAP tiedosto, minkä voi avata OpenCPN softalla.
+Lopputuloksena syntyy geokoodattu KAP tiedosto, minkä voi avata OpenCPN softalla.
 
 Ohjelma luo paljon WMTS_alkuisia.png tiedostoja (A, B, C ja D sarjoista näitä syntyy noin 80t kpl). Nämä voi huoleta poistaa konversion jälkeen. Ohjelman voi myös ajaa samalla lähtötiedolla useamman kerran (tällöin vain syntyy uudelleen saman nimiset aineistot). Ohjelman voi myös keskeyttää ja aloittaa uudelleen (huom. multithread ohjelmaa on vaikeampi keskeyttää, koska se ei juuri vastaa Ctrl-C komentoon).
 
