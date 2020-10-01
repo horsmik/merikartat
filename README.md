@@ -1,6 +1,6 @@
 # merikartat
 
-Tämä on harjoitelma OpenCPM merikarttojen luomiseen Liikenneviraston Avoimesta Datasta.
+Tämä on harjoitelma OpenCPN merikarttojen luomiseen Liikenneviraston Avoimesta Datasta.
 
 Disclaimer: Ei navigointiin
 
