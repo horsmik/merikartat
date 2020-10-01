@@ -15,7 +15,7 @@ Ohjelma luo bittikartat sekä niihin liittyvät konfiguraatiotiedostot. OpenCPN 
 Scripti ei ole erityisen versioriippuvainen ja toiminee kaikilla 3.x pythoneilla. Tarvitset lisäksi muutaman kirjaston. 
 
 Taustaa:
-https://www.fe83.org/gallery/view_album.php?set_albumName=album675
+https://www.fe83.org/gallery/index.php/ry-member/album258/Projekteja/album675
 
 Hyödyllistä myös asentaa imagemagick, millä voi käsittellä haettujen bittikarttojen väripaletin ennen KAP konversiota. Ilman tuota karttojen värisävyt saattavat vaihdella paljonkin (yksittäin tehtyjen imgkap.exe konversioiden jäljiltä)
 
