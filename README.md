@@ -40,6 +40,7 @@ Tuossa uudelle kartalle tulee palette.png tiedostossa olevat värisävyt, jolloi
 > magick kartan_nimi.png -brightness-contrast -35,43 -modulate 100,250 CONTRAST_kartan_nimi.png
 
 > magick convert CONTRAST_kartan_nimi.png -colors 32 png8:kartan_nimi_c32.png
+
 Näistä ensimmäinen lisää kontrastia ja värikylläisyyttä. Jälkimmäinen tiputtaa värimäärän 32 väriin.
 
 Lopuksi tehdään .png > .KAP -konversio komennolla:
