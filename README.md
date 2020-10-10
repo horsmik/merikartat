@@ -10,7 +10,7 @@ https://www.liikennevirasto.fi/avoindata/kayttoehdot/avoimen-tietokannan-lisenss
 Ainuttakaan ohjelman luomaa karttaa ei ole tarkistettu/varmistettu. Ne näyttävät olevan kunnossa, mutta näitä ei tule käyttää navigointiin. Ainakaan ainoana karttana :)
 
 
-Ohjelma luo bittikartat sekä niihin liittyvät konfiguraatiotiedostot. OpenCPN muunnokseen tarvitset lisäksi imgkap-ohjelman.
+Ohjelma luo bittikartat sekä niihin liittyvät konfiguraatiotiedostot. OpenCPN muunnokseen tarvitset lisäksi imgkap-ohjelman. https://github.com/nohal/imgkap
 
 Scripti ei ole erityisen versioriippuvainen ja toiminee kaikilla 3.x pythoneilla. Tarvitset lisäksi muutaman kirjaston. 
 
