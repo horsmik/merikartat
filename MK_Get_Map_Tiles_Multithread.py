@@ -29,7 +29,7 @@
 ## Example: python MK_Get_Map_Tiles.py MK_A_data.csv
 
 ## 5.12.2019: Uusi versio softasta. Edellinen oli todella hidas toistuvien http kutsujen johdosta.
-## Uudessa multithreadding ja reily 15X nopeus edelliseen verrattuna
+## Uudessa multithreadding ja reilu 15X nopeus edelliseen verrattuna
 ## Nyt 1000 pikkukarttaa haeraan parissa minuutissa. 
 
 ## 7.12.2019: * Korjattu paha bugi, missa ohjelma hidastui, jos haettavien karttalehtien lista oli pitka.
@@ -53,7 +53,7 @@ import multiprocessing
 listOfTiles = []
 reuseTiles = True ## Jos True, ohjelma ensin katsoo onko ko. WMTS-tiili jo haettu aikaisemmin.
                   ## Nopeuttaa paljon, jos  esim. korjaan karttalehden rajausta (kun ei haeta karttatiilta uudelleen API:sta).
-                  ## False asetuksella haetaan aina API-sta uusi tiili. Jos esim halutaan rakentaa/paivittaa kartta kokonaan udelleen.
+                  ## False asetuksella haetaan aina API-sta uusi tiili. Jos esim halutaan rakentaa/paivittaa kartta kokonaan uudelleen.
 
 ##http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_tile_numbers_2
 def deg2num(lat_deg, lon_deg, zoom):
