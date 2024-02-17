@@ -18,9 +18,9 @@
 
 mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
 
-liikennevirasto:Satamakartat;20000;MK_SK_191_HKI;18644;18665;9477;9508;15
-#liikennevirasto:Satamakartat;20000;MK_SK_192_VUOSAARI;18664;18685;9477;9504;15
-#liikennevirasto:Satamakartat;25000;MK_SK_160_MAARIANHAMINA;18189;18210;9495;9526;15
-#liikennevirasto:Satamakartat;25000;MK_SK_162_SOTTUNGA;18227;18267;9490;9517;15
-#liikennevirasto:Satamakartat;20000;MK_SK_167_UTO;18323;18334;9538;9565;15
-#liikennevirasto:Satamakartat;20000;MK_SK_190_TURKU;18385;18412;9425;9446;15
+Traficom:Satamakartat;20000;MK_SK_191_HKI;18644;18665;9477;9508;15
+#Traficom:Satamakartat;20000;MK_SK_192_VUOSAARI;18664;18685;9477;9504;15
+#Traficom:Satamakartat;25000;MK_SK_160_MAARIANHAMINA;18189;18210;9495;9526;15
+#Traficom:Satamakartat;25000;MK_SK_162_SOTTUNGA;18227;18267;9490;9517;15
+#Traficom:Satamakartat;20000;MK_SK_167_UTO;18323;18334;9538;9565;15
+#Traficom:Satamakartat;20000;MK_SK_190_TURKU;18385;18412;9425;9446;15

@@ -28,12 +28,10 @@
 ## The configuration csv file will need to be given as a parameter when starting the script
 ## Example: python MK_Get_Map_Tiles.py MK_A_data.csv
 
-## 5.12.2019: Uusi versio softasta. Edellinen oli todella hidas toistuvien http kutsujen johdosta.
-## Uudessa multithreadding ja reilu 15X nopeus edelliseen verrattuna
-## Nyt 1000 pikkukarttaa haeraan parissa minuutissa. 
+## 5.12.2019: Uusi multithread versio softasta. Edellinen oli todella hidas perattaisten http kutsujen johdosta.
 
 ## 7.12.2019: * Korjattu paha bugi, missa ohjelma hidastui, jos haettavien karttalehtien lista oli pitka.
-##            * Tehty valinta: jos WMTS-tiili on jo levylla, ei haeta uudelleen API:sta
+##            * Tehty valinta: jos WMTS-tiili on jo levylla, ei haeta bittikarttaa uudelleen API:sta
 ##            * Muutettu "temp" WMTS-tiedostojen nimet, jotta voidaan erottaa eri kartta-aineitoista haetut karttatiilet
 ##              * Edellisesta johtuen (enka talta osin jaksa enaa korjata ohjelmaa) yhdessa kartta.csv tiedostossa saa olla vain
 ##                yhden aineiston kartttalehtia (esim merikartta B). Tuo on Kosmeettinen ongelma, kannattaa vaan tehda 
@@ -51,9 +49,9 @@ from concurrent.futures import ThreadPoolExecutor
 import multiprocessing
 
 listOfTiles = []
-reuseTiles = True ## Jos True, ohjelma ensin katsoo onko ko. WMTS-tiili jo haettu aikaisemmin.
+reuseTiles = False ## Jos True, ohjelma ensin katsoo onko ko. WMTS-tiili jo haettu aikaisemmin.
                   ## Nopeuttaa paljon, jos  esim. korjaan karttalehden rajausta (kun ei haeta karttatiilta uudelleen API:sta).
-                  ## False asetuksella haetaan aina API-sta uusi tiili. Jos esim halutaan rakentaa/paivittaa kartta kokonaan uudelleen.
+                  ## False asetuksella haetaan aina API-sta uusi tiili. Jos esim halutaan rakentaa/paivittaa kartta kokonaan udelleen.
 
 ##http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_tile_numbers_2
 def deg2num(lat_deg, lon_deg, zoom):
@@ -170,9 +168,9 @@ def CreateListOfTiles(mapData, scale, name_extension, xmin, xmax, ymin, ymax, zo
             if reuseTiles == True:
               if path.exists('WMTS_'+wmtsName+"_"+str(zoom)+'_'+str(x)+'_'+str(y)+'.png') == False:
                   #print("ei loytynyt, haetaan")
-                  listOfTiles.append("https://julkinen.liikennevirasto.fi/rasteripalvelu/service/wmts?request=GetTile&version=1.0.0&service=wmts&layer="+mapData+"&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:"+str(zoom)+"&tilerow="+str(y)+"&tilecol="+str(x)+"&format=image/png&style=default")
+                  listOfTiles.append("https://julkinen.traficom.fi/rasteripalvelu/wmts?request=GetTile&version=1.0.0&service=wmts&layer="+mapData+"&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:"+str(zoom)+"&tilerow="+str(y)+"&tilecol="+str(x)+"&format=image/png&style=default")
             else:
-                listOfTiles.append("https://julkinen.liikennevirasto.fi/rasteripalvelu/service/wmts?request=GetTile&version=1.0.0&service=wmts&layer="+mapData+"&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:"+str(zoom)+"&tilerow="+str(y)+"&tilecol="+str(x)+"&format=image/png&style=default")
+                listOfTiles.append("https://julkinen.traficom.fi/rasteripalvelu/wmts?request=GetTile&version=1.0.0&service=wmts&layer="+mapData+"&TILEMATRIXSET=WGS84_Pseudo-Mercator&TileMatrix=WGS84_Pseudo-Mercator:"+str(zoom)+"&tilerow="+str(y)+"&tilecol="+str(x)+"&format=image/png&style=default")
     print(name_extension+" CountOfTiles: "+str((xmax+1-xmin)*(ymax+1-ymin)))
     return(listOfTiles)
   

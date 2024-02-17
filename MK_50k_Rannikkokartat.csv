@@ -7,19 +7,19 @@
 
 mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
 
-liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_621;18718;18736;9492;9524;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_624;18684;18717;9520;9524;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_625;18657;18684;9502;9538;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_620;18736;18759;9490;9508;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_618;18759;18789;9485;9505;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_614;18790;18819;9477;9505;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_612;18820;18863;9474;9490;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_A_RK_628;18623;18657;9532;9550;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_629;18604;18623;9538;9563;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_631;18570;18603;9541;9562;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_632;18552;18575;9541;9572;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_633;18532;18552;9551;9572;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_635;18497;18531;9555;9572;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_636;18472;18496;9568;9578;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_637;18436;18471;9566;9572;15
-#liikennevirasto:Rannikkokartat%20public;50000;MK_B_RK_644;18407;18441;9566;9578;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_621;18718;18736;9492;9524;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_624;18684;18717;9520;9524;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_625;18657;18684;9502;9538;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_620;18736;18759;9490;9508;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_618;18759;18789;9485;9505;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_614;18790;18819;9477;9505;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_612;18820;18863;9474;9490;15
+#Traficom:Rannikkokartat%20public;50000;MK_A_RK_628;18623;18657;9532;9550;15
+#Traficom:Rannikkokartat%20public;50000;MK_B_RK_629;18604;18623;9538;9563;15
+#Traficom:Rannikkokartat%20public;50000;MK_B_RK_631;18570;18603;9541;9562;15
+#Traficom:Rannikkokartat%20public;50000;MK_B_RK_632;18552;18575;9541;9572;15
+#Traficom:Rannikkokartat%20public;50000;MK_B_RK_633;18532;18552;9551;9572;15
+#Traficom:Rannikkokartat%20public;50000;MK_B_RK_635;18497;18531;9555;9572;15
+#Traficom:Rannikkokartat%20public;50000;MK_B_RK_636;18472;18496;9568;9578;15
+Traficom:Rannikkokartat%20public;50000;MK_B_RK_637;18436;18471;9566;9572;15
+#Traficom:Rannikkokartat%20public;50000;MK_B_RK_644;18407;18441;9566;9578;15

@@ -16,17 +16,17 @@
 #Tiilet:       vas-x;oik-x;ylä-y;ala-y
 
 mapData;mapScale;fileName;x_min;x_max;y_min;y_max;zoomLevel
-liikennevirasto:Merikarttasarja%20E;50000;MK_E_801;18300;18338;9366;9398;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_800;18260;18299;9366;9398;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_802;18290;18336;9342;9365;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_803;18290;18336;9312;9342;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_804;18300;18346;9280;9312;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_805;18306;18352;9260;9292;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_806;18307;18353;9238;9259;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_807;18307;18353;9211;9237;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_808;18347;18367;9191;9237;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_809;18315;18346;9167;9210;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_810;18306;18338;9144;9172;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_811;18305;18336;9097;9143;15
-#liikennevirasto:Merikarttasarja%20E;50000;MK_E_812;18300;18332;9060;9109;15
+Traficom:Merikarttasarja%20E;50000;MK_E_801;18300;18338;9366;9398;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_800;18260;18299;9366;9398;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_802;18290;18336;9342;9365;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_803;18290;18336;9312;9342;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_804;18300;18346;9280;9312;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_805;18306;18352;9260;9292;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_806;18307;18353;9238;9259;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_807;18307;18353;9211;9237;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_808;18347;18367;9191;9237;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_809;18315;18346;9167;9210;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_810;18306;18338;9144;9172;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_811;18305;18336;9097;9143;15
+#Traficom:Merikarttasarja%20E;50000;MK_E_812;18300;18332;9060;9109;15
 
